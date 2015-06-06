@@ -178,6 +178,7 @@ You can use this call to AVR_NET_IO module
 
 #Plugins
 **notify_pushover.php**
+
 Is a plugin you can use to send Naemon alerts using Pushover.net
 
 Usage:
@@ -189,6 +190,19 @@ define command{
 define command{
     command_name    service-notify-pushover
     command_line    $USER1$/nook24-naemon-plugins/plugins/notify_pushover.php --type service --user-key $YOUR_USER_KEY$ --token $YOUR_TOKEN$ --output "$SERVICEOUTPUT$" --currentstate "$SERVICESTATE$" --hostname "$HOSTDISPLAYNAME$" --servicename "$SERVICEDESC$"
+}
+```
+
+**check_TEMPer.php**
+
+A PHP wrapper plugin for [pcsensor](https://github.com/padelt/pcsensor-temper/) TEMPer sensors
+Usage:
+Usage:
+```
+define command{
+    command_name    check_TEMPer
+    command_line    $USER1$/nook24-naemon-plugins/plugins/check_TEMPer.php -w 24:27 -c 22:33
+    ;command_line    $USER1$/nook24-naemon-plugins/plugins/check_TEMPer.php -w $ARG1$ -c $ARG2$
 }
 ```
 
