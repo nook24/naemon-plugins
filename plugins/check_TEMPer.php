@@ -55,12 +55,6 @@ if(isset($output[0]) && is_numeric($output[0])){
 		NookNaemonPlugin\Naemon::exitOk();
 	}
 	
-	if($value >= $warning['min'] && $value <= $warning['max']){
-		NookNaemonPlugin\Naemon::setOutput('Ok: Fish tank temperature: %s°C', [$value]);
-		NookNaemonPlugin\Naemon::printOutput();
-		NookNaemonPlugin\Naemon::exitOk();
-	}
-	
 	if($value <= $critical['min'] || $value >= $critical['max']){
 		NookNaemonPlugin\Naemon::setOutput('Critical: Fish tank temperature: %s°C', [$value]);
 		NookNaemonPlugin\Naemon::printOutput();

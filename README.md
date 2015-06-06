@@ -196,13 +196,28 @@ define command{
 **check_TEMPer.php**
 
 A PHP wrapper plugin for [pcsensor](https://github.com/padelt/pcsensor-temper/) TEMPer sensors
+
 Usage:
-Usage:
+
 ```
 define command{
     command_name    check_TEMPer
     command_line    $USER1$/nook24-naemon-plugins/plugins/check_TEMPer.php -w 24:27 -c 22:33
     ;command_line    $USER1$/nook24-naemon-plugins/plugins/check_TEMPer.php -w $ARG1$ -c $ARG2$
+}
+```
+
+**check_fishtank_leak.php**
+
+A plugin to check via AVR_NET_IO module if my fish tank starts to leak
+
+Usage:
+
+```
+define command{
+    command_name    check_fishtank_leak
+    command_line    $USER1$/nook24-naemon-plugins/plugins/check_fishtank_leak.php -H 192.168.0.10 -p 50290 -w 800 -c 400 --analogport 1
+    ;command_line    $USER1$/nook24-naemon-plugins/plugins/check_fishtank_leak.php -H $HOSTADDRESS$ -p 50290 -w $ARG1$ -c $ARG2$ --analogport $ARG3$ (1 to 4)
 }
 ```
 

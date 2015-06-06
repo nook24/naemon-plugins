@@ -6,7 +6,6 @@
 * 
 * MIT License (MIT)
 **/
-
 class AVR_NET_IO{
 	
 	function __construct($ip, $port){
@@ -84,6 +83,12 @@ class AVR_NET_IO{
 		return trim(fgets($this->connection, 1024));
 	}
 	
+	function analog($port){
+		$port = trim($port);
+		fwrite($this->connection, "GETADC ".(int)$port);
+		return $this->response();
+	}
+
 	function checkResponse($type = null){
 		switch($type){
 			case 'ip':
