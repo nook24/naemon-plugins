@@ -1,14 +1,14 @@
 # nook24-naemon-plugins
 Is a micro framework to create Naemon plugins using php.
 
-If you are working with Naemon you nearly need to create a custom Plugin every day. To hack a quick and dirty plugin is no problem but things like parameters, buld th output or implement --help eats time. For this reaseon I hacked this framework.
+If you are working with Naemon you nearly need to create a custom Plugin every day. To hack a quick and dirty plugin is not that problem but things like parameters, build the output or implement --help eats time. For this reaseon I hacked this framework.
 
-Please take a look at tests.php
+Please take a look at tests.php to see how everything works...
 
 # Libraries
 All Libraries are placed in libs folder:
 ##OptionParser
-**Basic usage:** (basic usage)
+**Basic usage:**
 ```php
 <?php
 use NookNaemonPlugin\OptionsParser;
