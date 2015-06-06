@@ -4,7 +4,7 @@
 * A PHP Plugin to get results of a TEMPer sensor
 * 
 * Require a TEMPer sensor and https://github.com/padelt/pcsensor-temper/
-*
+* chmod u+s TEMPerl/pcsensor that naemon user can execute the tool as root
 * Daniel Ziegler <daniel@statusengine.org>
 * 
 * Usage: php5 plugins/check_TEMPer.php -w 24:27 -c 22:33
