@@ -173,9 +173,13 @@ if($GPIO->check()){
 }
 ```
 
+##AVR_NET_IO
+You can use this call to AVR_NET_IO module
+
 #Plugins
 **notify_pushover.php**
 Is a plugin you can use to send Naemon alerts using Pushover.net
+
 Usage:
 ```
 define command{
