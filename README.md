@@ -76,9 +76,26 @@ Array
 */
 ```
 
+**Automatic generated --help:**
+```php
+$optionsParser->setOptions([ 
+	'warning' => ['short' => 'w', 'desc' => 'The warning threshold e.g -w 50 or --warning 50'],
+	'critical' => ['short' => 'c', 'desc' => 'The critical threshold e.g -w 100 or --critical 100'],
+]);
+```
+
+```bash
+php5 tests.php --help
+--warning	-w	The warning threshold e.g -w 50 or --warning 50
+--critical	-c	The critical threshold e.g -w 100 or --critical 100
+--help	-h	Print this help
+```
+You can use --help and -h
+
 ##Naemon
 The Naemon class can be used to generate output and perfdata output
-**Output only:**
+
+**Output only example:**
 ```php
 <?php
 use NookNaemonPlugin\Naemon;
@@ -93,7 +110,7 @@ Put a integer here 50 and just a string here "Hello world"
 */
 ```
 
-**Output + Perfdata:**
+**Output + Perfdata example:**
 ```php
 <?php
 use NookNaemonPlugin\Naemon;
@@ -123,6 +140,7 @@ Put a float here 1.337000, a integer here 5 and just a string here "Hello World"
 ```
 
 **Exit codes:**
+
 You can simply use exit(0) to submit your state, but this makes your plugins source code maybe unreadable for people that are not as familiar with Naemon as you.
 ```php
 <?php
