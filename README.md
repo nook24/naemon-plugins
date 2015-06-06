@@ -173,6 +173,23 @@ if($GPIO->check()){
 }
 ```
 
+#Plugins
+**notify_pushover.php**
+Is a plugin you can use to send Naemon alerts using Pushover.net
+Usage:
+```
+define command{
+    command_name    host-notify-pushover
+    command_line    $USER1$/nook24-naemon-plugins/plugins/notify_pushover.php --type host --user-key $YOUR_USER_KEY$ --token $YOUR_TOKEN$ --output "$HOSTOUTPUT$" --currentstate "$HOSTSTATE$" --hostname "$HOSTNAME$"
+}
+define command{
+    command_name    service-notify-pushover
+    command_line    $USER1$/nook24-naemon-plugins/plugins/notify_pushover.php --type service --user-key $YOUR_USER_KEY$ --token $YOUR_TOKEN$ --output "$SERVICEOUTPUT$" --currentstate "$SERVICESTATE$" --hostname "$HOSTDISPLAYNAME$" --servicename "$SERVICEDESC$"
+}
+```
+
+#Installation
+To use the plugin skeleton or one of the provided plugins just clone this repository to your plugins location (libexec folder).
 
 # License
 MIT License
