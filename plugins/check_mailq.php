@@ -15,7 +15,6 @@ use NookNaemonPlugin\Naemon;
 
 require_once __DIR__."/../libs/Naemon.php";
 require_once __DIR__."/../libs/OptionsParser.php";
-require_once __DIR__."/../libs/AVR_NET_IO.php";
 
 $optionsParser = new NookNaemonPlugin\OptionsParser();
 $optionsParser->setOptions([ 
