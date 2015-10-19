@@ -221,6 +221,19 @@ define command{
 }
 ```
 
+**check_mailq.php**
+
+A PHP Plugin I use to check my postfix mail queue
+
+Usage:
+
+```
+define command{
+    command_name    check_mailq
+    command_line    $USER1$/nook24-naemon-plugins/plugins/check_mailq.php -w 30 -c 50
+}
+```
+
 #Installation
 To use the plugin skeleton or one of the provided plugins just clone this repository to your plugins location (libexec folder).
 
